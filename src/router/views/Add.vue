@@ -17,10 +17,11 @@ import store from '/src/store'
 import router from '/src/router';
 
 const hizliEkle = (e) => {
+    const id = new Date().getTime()
     store.state.notes.push({
         title: baslik.value,
         content: icerik.value,
-        id: new Date().getTime(),
+        id: id,
     })
     baslik.value = ''
     icerik.value = ''

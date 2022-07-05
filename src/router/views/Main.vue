@@ -1,8 +1,8 @@
 <template>
     <div class="text-white">
-        <ul v-for="item in notes" :key="item.id">
-            <li @click="[show($event), recentItem(item)]" :key="item.id" class="text-white text-xl font-bold list-disc hover:text-rose-500 cursor-pointer transition-all ">
-                {{item.title}}
+        <ul class="flex flex-col items-center">
+            <li v-for="item in notes" :key="item.id" @click=" recentItem(item)"   class="max-w-xl break-words text-white text-xl font-bold list-disc hover:text-rose-500 cursor-pointer transition-all ">
+               {{item.title}}
             </li>
         </ul>
     </div>
@@ -11,7 +11,6 @@
 </template>
 
 <script setup>
-import { ref } from '@vue/reactivity';
 import router from '/src/router';
 import store from '/src/store';
 
@@ -22,12 +21,15 @@ const isEmpty=store.state.isEmpty;
 const show =(e)=>{
     const keyNo=e.target.__vnode.key
     router.push("/details/"+keyNo);
-
+    
+    
 }
 const recentItem=(item)=>{
+
+    
     store.state.selected=[]
     store.state.selected=item
-
+    router.push("/details/"+store.state.selected.id);
 
 }
 </script>
