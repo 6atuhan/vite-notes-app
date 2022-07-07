@@ -6,7 +6,7 @@
             </li>
         </ul>
     </div>
-     <h1 v-show="isEmpty" class="title animate-pulse !text-red-700 sdw">Liste boş <br/>Ekle Butonunu kullan </h1>
+     <h1 v-show="isEmpty" class="title animate-pulse select-none !text-red-700 sdw">Liste boş <br/>Ekle Butonunu kullan </h1>
 
 </template>
 

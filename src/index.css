@@ -33,3 +33,16 @@
         text-rose-100
     
 }
+
+.darkMode-button{
+    @apply
+        btn 
+        absolute left-0 top-0 
+        !text-amber-200 !bg-black m-5 
+        hover:shadow-gray-900
+        hover:shadow-xl
+
+        dark:!bg-amber-200 dark:!text-black
+        dark:hover:shadow-rose-100
+        dark:hover:shadow-lg
+}
