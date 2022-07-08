@@ -2,11 +2,11 @@
     <div class=" flex flex-col flex-wrap justify-center items-center h-full w-ful">
         <button @click="toggleMode" class=" darkMode-button">{{colorMode}}</button>
         <div  class=" flex m-10 gap-4 w-1/2 justify-between" >
-            <router-link class="btn" active-class="active-btn" to="/"> ANA SAYFA </router-link>
+            <router-link class="btn " active-class="active-btn" to="/"> ANA SAYFA </router-link>
             <h1 class="title sdw1">Note App</h1>
             <router-link class="btn " active-class="active-btn" to="/add"> EKLE </router-link>
         </div>
-        <div ><router-view></router-view></div>
+        <div ><router-view ></router-view></div>
     </div>
 </template>
     
