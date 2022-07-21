@@ -6,6 +6,15 @@ state:{
     notes:[ ],
     selected:[],
     isEmpty:true,
+    havaDurumu:
+        {
+            şehir:"",
+            derece:0,
+            tarih:"",
+            seçilişehir:"",
+            icon:"",
+            iconName:""
+        }
 }                                                       
 });                                                         
                                                          

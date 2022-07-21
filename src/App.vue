@@ -1,4 +1,5 @@
 <template >
+
     <div class=" flex flex-col flex-wrap justify-center items-center h-full w-ful">
         <button @click="toggleMode" class=" darkMode-button">{{colorMode}}</button>
         <div  class=" flex m-10 gap-4 w-1/2 justify-between" >
@@ -8,6 +9,8 @@
         </div>
         <div ><router-view ></router-view></div>
     </div>
+        <weather-screen class="!absolute right-0 top-0 " ></weather-screen>
+    
 </template>
     
 
@@ -19,6 +22,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import weatherScreen from './components/weatherScreen.vue';
 
 const isDark= ref(false);
 const colorMode = ref("dark");
