@@ -26,7 +26,7 @@ const showWe = () => {
 
 aranacakSehir.value=document.querySelector("#Sehirler").value
     axios
-        .get('http://api.weatherapi.com/v1/current.json?key=1e0606850c1f402bab7105311221307&q=' +
+        .get('https://api.weatherapi.com/v1/current.json?key=1e0606850c1f402bab7105311221307&q=' +
     aranacakSehir.value +
     '&aqi=no')
         .then(function (response) {
